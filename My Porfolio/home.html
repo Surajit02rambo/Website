@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">  
+     
+    <title>Home</title>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    
+    background: url(https://images.pexels.com/photos/3707669/pexels-photo-3707669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    position: relative;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.192);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(5px);
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: -3px -3px 10px rgba(247, 239, 239, 0.911),
+                 8px 8px 10px black;
+    overflow: hidden;
+}
+
+.card:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #20053f, #e71fbc);
+    clip-path: circle(400px at 50% -48.5%);
+}
+
+.header{
+    position: relative;
+    height: 265px;
+}
+
+
+.main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .image{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* background-size: contain; */
+    box-shadow: -8px -8px 10px #ee7ac7,
+                 8px  8px  10px #20021b;
+    background: url(surajit2.jfif), contain;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image .hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(133, 31, 128, 0.637);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+.main .image:hover{
+    transform: scale(1.1);
+}
+.image:hover .hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.hover.active{
+    opacity: 1;
+}
+
+.name{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+.sub-name{
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.2rem;
+    opacity: .8;
+    color: #fff;
+}
+
+.content{
+    display: flex;
+    padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+}
+
+.right{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 2.1rem;
+}
+
+.number{
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: #333;
+    line-height: 1.2;
+}
+
+.number-title{
+    font-size: .55rem;
+    color: #666;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.title{
+    position: relative;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0 0 3px 0;
+    margin-bottom: .9rem;
+    display: inline-block;
+}
+
+.title:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: #555;
+    bottom: 0;
+    left: 0;
+}
+
+.text{
+    color: #666;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.icons-container{
+    padding: 1rem 0;
+}
+
+.icon{
+    color: #ffffff;
+    font-size: 2.1rem;
+    text-decoration: none;
+    margin-left: 33px;
+    transition: .3s;
+}
+
+.icon:hover i{
+    color: #e00e5f;
+    border-radius: 30%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 0px 20px rgb(252, 246, 247);
+    background-color: whitesmoke;
+    padding: 8px 5px 0px 8px;
+    
+    
+}
+
+.buttons-wrap{
+    display: flex;
+    margin-top: 5px;
+}
+
+.follow-wrap, .share-wrap{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.follow-wrap:hover, .share-wrap:hover{
+    flex: 5;
+}
+
+.follow{
+    padding: 9.6px 0;
+    width: 100%;
+    background: linear-gradient(to right, #8d0c62 0%, #c22084 140%);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 18.1px;
+    margin-right: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: -5px -5px 10px whitesmoke,
+                5px 5px 10px whitesmoke;
+}
+
+.share{
+    padding: 7.6px 0;
+    width: 100%;
+    border: 2px solid #faecf2;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 3px;
+    border-radius: 18.1px;
+    box-shadow: -5px -5px 10px whitesmoke,
+                5px 5px 10px whitesmoke;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    opacity: 0;
+    transition: .5s;
+}
+
+.modal img{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.3);
+    max-width: 100%;
+    max-height: 100%;
+    transition: .5s;
+}
+
+.modal.show{
+    opacity: 1;
+    z-index: 99;
+}
+
+.modal.show img{
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close:hover{
+    opacity: .5;
+}
+
+.close:before, .close:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+}
+
+.close:before{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close:after{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+@media (max-width: 410px){
+    .content{
+        flex-direction: column;
+    }
+
+    .right{
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    .icon{
+        margin-left: 23px;
+    }
+}
+
+@media (max-width: 370px){
+    .header{
+        height: 230px;
+    }
+
+    .card:before{
+        clip-path: circle(400px at 50% -74.5%);
+        height: 230px;
+    }
+
+    .main .image{
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+
+    .name, .sub-name{
+        font-size: 1rem;
+    }
+
+    .content{
+        padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+    }
+
+    .number{
+        font-size: 1.8rem;
+    }
+
+    .number-title{
+        font-size: .4rem;
+    }
+
+    .right{
+        padding-top: 1rem;
+    }
+
+    .title{
+        font-size: .9rem;
+        margin-bottom: .5rem;
+    }
+
+    .text{
+        font-size: .8rem;
+    }
+
+    .icons-container{
+        padding: .5rem 0;
+    }
+
+    .icon{
+        font-size: 1.5rem;
+    }
+
+    .follow{
+        padding: 7.6px 0;
+        border-radius: 14.6px;
+        font-size: 1rem;
+    }
+
+    .share{
+        padding: 5.6px 0;
+        border-radius: 14.6px;
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+   <div class="modal">
+       <img src="surajit.jfif">
+      <div class="close"></div>
+    </div>
+    
+    <div class="container">
+       <div class="card">
+           <div class="header">
+                <div class="main">
+                    <div class="image">
+                        <img src="surajit2.jfif" style="margin-left: 3.5px;">
+                        <div class="hover">
+                            <i class="fas fa-camera fa-2x"></i>
+                        </div>
+                    </div>
+                    <h2 class="name" style="margin-top: 20px;font-family: 'Lobster Two', cursive;letter-spacing: 2px;
+                    font-size: 25px;text-shadow: -5px -5px 8px crimson,5px 5px 8px crimson;">Surajit Bhattacharyya</h3>
+                </div>
+            </div>
+
+      <div class="content">
+           <div class="left">
+             <div class="about-container">
+          <h3 class="title"></h3>
+      <p class="text" style="color: ghostwhite; text-shadow: 3px 3px 8px cyan; font-size: 25px;font-weight: 600;">The Best Way You Can Predict The Future Is To Create It!</p>
+          </div>
+      <div class="icons-container">
+          <a href="https://www.facebook.com/profile.php?id=100069996800126" class="icon">
+           <i class="fab fa-facebook"></i>
+          </a>
+         <a href="https://instagram.com/bhattacharyya695?utm_medium=copy_link" class="icon">
+           <i class="fab fa-instagram"></i>
+         </a>
+         <a href="https://www.linkedin.com/in/surajit-bhattacharyya-bb0b49209" class="icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Surajit02rambo" class="icon">
+            <i class="fab fa-github"></i>
+          </a>
+                    </div>
+         <div class="buttons-wrap">
+            <div class="follow-wrap">
+     <a href="About page.html" class="follow">about</a>
+                        </div>
+        <div class="share-wrap">
+      <a href="My Portfolio.html" class="share">main menu</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const image = document.querySelector('.image');
+const hover = document.querySelector('.hover');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close');
+
+function show(){
+    hover.classList.add('active');
+    modal.classList.add('show');
+}
+
+function hide(){
+    hover.classList.remove('active');
+    modal.classList.remove('show');
+}
+
+image.addEventListener('click', show);
+close.addEventListener('click', hide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>DIGITAL CLOCK</title>
+        <link href='https://fonts.googleapis.com/css?
+        family='Orbitron' rel='stylesheet'type='text/css'>
+        <script>
+            function startTime(){
+                var today =new Date();
+                var h =today.getHours();
+                var m =today.getMinutes();
+                var s =today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("clock").innerHTML = 
+                  h + ":" + m + ":" + s;
+                  var t =setTimeout(startTime,500);
+
+            }
+              function checkTime(i){
+                  if(i<10) {i= "0"+ i};
+                  return i;
+              }
+        </script>
+         <style>
+               #wallpaper {
+                   background: url(https://wallpapertag.com/wallpaper/full/3/5/1/369874-digital-background-1920x1080-for-mobile-hd.jpg);
+                   background-size: contain;
+                   position: absolute;
+                   background-repeat: repeat-x;
+                   height: 100%;
+                   width: 100%;
+               }
+               #clock {
+                letter-spacing: 7px;
+                color: #b3f2fa;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 10em;
+                font-weight: 150;
+                background: -moz-linear-gradient(#175f81, #ace5ee 60%);
+                       background: -o-linear-gradient(#175f81, #ace5ee 60%);
+                       background: -ms-linear-gradient(#175f81, #ace5ee 60%);
+                   
+            }
+            #box {
+                color: blanchedalmond;
+                top: 40%;
+                left: 80%;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body onload="startTime()">
+        <div id="wallpaper">
+            <pre style="font-size: 3.5em; color:#b3f2fa; font-family: fantasy; margin-left: 980px;margin-top: 220px;"><I>PM</I></pre>
+            <pre style="font-size: 3.5em; color:#b3f2fa; font-family: fantasy; margin-left: 460px;margin-top: 240px;">WEDNESDAY</pre>
+            <pre style="font-size: 3.5em; color:#b3f2fa; font-family: fantasy; margin-left: 760px;margin-top: -125px;">17</pre>
+            <pre style="font-size: 3.5em; color:#b3f2fa; font-family: fantasy; margin-left: 840px;margin-top: -125px;">FEBRUARY</pre>
+        
+        </div>
+        <div id="clock"></div>
+
+    </body>
+</html>

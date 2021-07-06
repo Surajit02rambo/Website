@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Moving Train</title>
+</head>
+<style>
+   
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #6e6e6e;
+	font-size: 1.6rem;
+}
+
+header, footer {
+  display: block;
+}
+
+a, a:link, a:visited {
+  color: lighten(black, 30);
+  text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+    .center {
+        background: -moz-linear-gradient(#175f81, #ace5ee 60%);
+        background: -o-linear-gradient(#175f81, #ace5ee 60%);
+        background: -ms-linear-gradient-linear-gradient(#175f81, #ace5ee 60%);
+        background: linear-gradient(#175f81, #ace5ee 60%);
+        background: #ace5ee;
+        background:  -webkit-linear-gradient(#175f81, #ace5ee 60%);
+        height: 100vh; 
+        overflow: hidden;
+        position: relative;
+        animation: daytime 20s infinite linear;
+    }
+
+        
+    .ball {
+        background: rgba(255, 184, 19, 0.8);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 0 0 3rem 0 rgba(255, 184, 19, 0.8);
+        margin-left: 200px;
+        margin-top: 40px;
+        animation: nighttime 20s infinite linear;
+    }
+    .clouds {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-left: 400px;
+        margin-top: -80px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 300s infinite linear ;
+        animation-delay: 2s;
+        
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+    .clouds1 {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-right: 200px;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 310s infinite linear;
+        animation-delay: 2s;
+        
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+    .clouds2 {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-left: 600px;
+        margin-top: -300px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 310s infinite linear;
+       
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+    .clouds3 {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-left: 200px;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 300s infinite linear;
+        
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+    .clouds4 {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-left: 600px;
+        margin-top: 30px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 310s infinite linear;
+        animation-delay: 2s;
+        
+} 
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+    .clouds5 {
+        height: 150px;
+        width: 150px;
+        background: url(https://images.onlinelabels.com/images/clip-art/Xoff/Cumulus%20Cloud-168626.png);
+        margin-left: 900px;
+        margin-top: -460px;
+        background-repeat: no-repeat;
+	      background-position: top center;
+	      background-size: contain;
+        animation: move 300s infinite linear;
+       
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+    }
+ 
+    .rocks_1 {
+	position: absolute;
+	bottom: -5px;
+	height: 395px;
+	width: 100%;
+	background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QckJsSTBOSmdsYmc);
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 100s infinite linear both;
+}
+.rocks_2 {
+	position: absolute;
+	bottom: -60px;
+	height: 315px;
+	width: 100%;
+	background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QSC1sYnVUWUxKSGs);
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 30s infinite linear both;
+
+}
+.trees{
+  position: absolute;
+	bottom: -60px;
+	height: 515px;
+	width: 100%;
+	background: url(http://clipartmag.com/images/pine-tree-clipart-16.png);
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 30s infinite linear both;
+
+}
+.rails {
+	position: absolute;
+	bottom: -110px;
+	height: 315px;
+	width: 100%;
+	background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QZmtCbjlIbjVwclk);
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 5s infinite linear both;
+  animation: step-start 5s;
+
+}
+.train {
+	position: absolute;
+	bottom: -105px;
+	height: 505px;
+	width: 38%;
+	left: 350px;
+	background: url(https://webstockreview.net/images/clipart-train-animated-gif-4.gif);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+  animation: move 30s infinite linear;
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+}
+.boggy{
+  position: absolute;
+	bottom: -105px;
+	height: 480px;
+	width: 18%;
+	left: 130px;
+	background: url(http://www.clker.com/cliparts/P/x/M/i/3/P/loco-train-carriage-hi.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+  animation: move 30s infinite linear;
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+}
+
+.boggy1 {
+  position: absolute;
+	bottom: -105px;
+	height: 480px;
+	width: 18%;
+  right: 1360px;
+	background: url(http://www.clker.com/cliparts/P/x/M/i/3/P/loco-train-carriage-hi.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+  animation: move 30s infinite linear;
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+}
+
+  
+.smoke{
+  position: absolute;
+	bottom: -105px;
+	height: 895px;
+  margin-left: 460px;
+	width: 38%;
+	left: 0px;
+	background: url(https://img1.picmix.com/output/stamp/normal/3/0/5/7/1087503_89d72.gif);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+  animation: move 30s infinite linear;
+}
+@keyframes move{
+  0%{
+    transform: translateX(0px);
+}
+100%{
+  transform: translateX(1310px);
+}
+}
+.ground {
+  position: absolute;
+  width: 1920px;
+  height: 98px;
+  bottom: 0px;
+  background: #16012f;
+}
+.lights {
+	position: absolute;
+	bottom: -89px;
+	height: 360px;
+	width: 100%;
+	background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QNTJ1U2M1eFptSTA);
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 4s infinite linear both;
+}
+@keyframes translateX {
+	0% {background-position: 1920px 0px;}
+	100% {background-position:  0px 0px;}
+
+}
+@-webkit-keyframes daytime{
+  0%{
+    background: -webkit-linear-gradient(#175f81, #ace5ee 60%); 
+  }
+  50%{
+   background:  -webkit-linear-gradient(#114861, #d9acee 60%);
+  }
+  100%{
+    background: -webkit-linear-gradient(#1c0625, #724870 60%);
+  }
+
+}
+@keyframes nighttime{
+0%{
+  background: rgba(255, 184, 19, 0.8);
+  box-shadow: 0 0 3rem 0 rgba(255, 184, 19, 0.8);
+}
+50%{
+  background: rgba(228, 79, 20, 0.8);
+  box-shadow: 0 0 3rem 0 rgba(255, 157, 44, 0.8);
+}
+100%{
+  background:  rgba(255, 204, 244, 0.8);
+  box-shadow: 0 0 3rem 0 rgba(255, 248, 253, 0.8);
+}
+}
+    
+    
+    
+</style>
+<body>
+    <div class="center">
+        <div class="ball"></div>
+        <div class="clouds"></div>
+        <div class="clouds1"></div>
+        <div class="clouds2"></div>
+        <div class="clouds3"></div>
+        <div class="clouds4"></div>
+        <div class="clouds5"></div>
+        <div class="rocks_1"></div>
+        <div class="rocks_2"></div>
+        <div class="trees"></div>
+        <div class="rails"></div>
+        <div class="train"></div>
+        <div class="boggy"></div>
+        <div class="boggy1"></div>
+        <div class="box"></div>
+        <div class="smoke"></div>
+        <div class="ground"></div>
+        <div class="lights"></div>
+        </div>
+        
+       
+        
+        
+</body>
+</html>
